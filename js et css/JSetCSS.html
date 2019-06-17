@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>JS et CSS</title>
+</head>
+<body>
+	<form>
+	<ul id="liste">
+		<li>un</li>
+		<li>deux</li>
+		<li>trois</li>
+	</ul>
+
+	<input type="button" value="efface" onclick="supprime()">
+	<input type="button" value="restaure" onclick="restaure()">
+</form>
+	
+	
+
+
+
+
+
+	<!--<div class="spoiler" onclick="toggleSpoiler(this);">
+		<span class="lienAfficher">Clique pour afficher</span>
+    <div class="contenuSpoiler">
+    	<ul id="liste">
+		<li>un</li>
+		<li>deux</li>
+		<li>trois</li>
+	</ul>
+        
+    </div>
+</div>-->
+
+
+
+
+	<script>
+		$liste = document.getElementById("liste");
+
+		function selectionne(e) {
+			e.target.classList.toggle("selected");
+		}
+		$liste.onclick = selectionne;
+
+
+
+		
+				
+		
+		function supprime(){
+			console.log("supr");
+			//$liste.children()= i ; 
+			//$liste.children[i].classList.remove("selected");
+			$liste.children[0].classList.add("suppr");
+			$liste.children[1].classList.add("suppr");
+			$liste.children[2].classList.add("suppr");
+		}
+		function restaure(){
+			console.log("restaure");
+			$liste.children[0].classList.toggle("restaure");
+			$liste.children[1].classList.toggle("restaure");
+			$liste.children[2].classList.toggle("restaure");	
+		}
+	
+			
+
+		
+		
+
+
+	</script>
+
+
+
+
+
+
+	
+<!--
+
+		var btn = document.createElement("button");    // Créer un élément <button>
+		var b = document.createTextNode("clique");  // Créer un noeud textuel
+		btn.appendChild(b);                          // Ajouter le texte au bouton
+		document.body.appendChild(btn);
+
+
+-->
+
+	
+	<script>
+		function ouvrirFermerSpoiler(div) {
+        var divContenu = div.getElementsByTagName('div')[0];
+        if(divContenu.style.display == 'none') {
+            divContenu.style.display = 'block';
+        } else {
+            divContenu.style.display = 'none';
+        }
+    }
+	</script>
+</body>
+</html>

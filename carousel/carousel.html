@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Carroussel.css">
+	<title>Carroussel</title>
+</head>
+<body>
+	<button id="precedent">Précédent</button>
+	<button id="suivant">Suivant</button>
+	
+	<ul id="carousel">
+		<li>Case 1</li>
+		<li>Case 2</li>
+		<li>Case 3</li>
+		<li>Case 4</li>		
+	</ul>
+
+	<script>
+		$carousel=document.getElementById('carousel');
+		 var liste=document.getElementById('carousel').children;
+		$suivant=document.getElementById('suivant');
+		$precedent=document.getElementById('precedent');
+		position =0;
+		//$carousel.style.borderColor = "#f00";
+
+		function suivant(){
+			console.log(position);
+			if (position < liste.length-1 ) {
+				liste[position].style.display = "none";
+				position ++;
+
+			} else {
+				position=0;
+				for (var i = 0; i < liste.length; i++) {
+					liste[i].style.display = null ;
+
+				}
+				
+
+			}
+		}
+
+		function precedent(){
+			console.log("valeur position : "+position);
+			if (position >= 0 ) {
+				liste[position].style.display = null ;
+				console.log("je mets "+position+" à null");
+				position --;
+			} else {
+				position=0;
+				for (var i = 0; i < liste.length-1; i++) {
+					liste[i].style.display = "none";
+					console.log("je mets "+i+" à none");
+					position++;
+				}
+				//$carousel.style.borderColor = "#f00";
+				//liste[position].style.display =  null;
+			}
+		}
+		$suivant.onclick = suivant;
+	$precedent.onclick = precedent;
+
+	</script>
+<!--Tu target toutes tes images avec la classe supposons 'slideshow'
+Tu obtiens donc un array
+Tu retiens la position actuel de l'image dans le array
+Si tu cliques à droite / gauche tu fais simplement +1 ou -1 dans ton array
+Si index === 0 et on tente d'aller à gauche, on va à la valeur max du array
+Et le contraire, si on es a la valeur max et qu'on veut aller à droite, on tombe à 0-->
+</body>
+</html>
