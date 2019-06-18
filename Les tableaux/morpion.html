@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="morpion.css">
+
+	<title>Morpion</title>
+</head>
+<body>
+	<div id="jeu" onclick="idClick()">
+
+		<div id="l1">
+			<div id="c1l1"></div>
+			<div id="c2l1"></div>
+			<div id="c3l1"></div>
+		</div>		
+
+		<div id="l2">			
+			<div id="c1l2"></div>
+			<div id="c2l2"></div>
+			<div id="c3l2"></div>
+		</div>
+
+		<div id="l3">			
+			<div id="c1l3"></div>
+			<div id="c2l3"></div>
+			<div id="c3l3"></div>
+		</div>
+	</div>
+	<br>
+	<button id="refresh" onclick="document.location.reload(false)">Reset</button>
+
+	<script>
+		function idClick(){
+			//event.target.style.backgroundColor="#ccc";
+			//alert("case "+ event.target.id);
+			event.target.classList.toggle("player1");
+			console.log("case "+ event.target.id);
+		}
+		function jeu(player1){
+			event.target.classList.toggle("player1");
+		}
+		
+
+	</script>
+</body>
+</html>
