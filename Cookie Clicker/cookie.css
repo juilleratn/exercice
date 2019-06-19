@@ -1,0 +1,20 @@
+
+
+#affichage{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 10%;
+	border: solid;
+	width: 100px;
+	height: 50px;
+	font-size: 40px;
+	text-align: center;
+}
+/*#achat{
+	border: solid red;
+	width: 50px;
+	height: 50px;
+	font-size: 10px;
+	margin-left: 23%;
+	margin-top: -15px;
+}*/
