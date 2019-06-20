@@ -5,9 +5,11 @@ var compteur = 1;
 var MC= document.getElementById('achat');
 var prix = 5;
 var ramp =document.getElementById('Rampage')
-var achat = 10;
+var achat = 20;
 var auto = 0;
-
+//var waou = new Audio('car_horn.wav');
+//waou.play();
+//bredele. clicker
 
 	function putaclic() {
 		
@@ -21,19 +23,18 @@ var auto = 0;
 			compteur++;
 		score = score - prix;
 		aff.innerHTML = score;
-		prix= prix*2;
-
-		
+		prix = prix*2;
 		}else{
 			alert("Pas assez de cookie ! ")
 		}
 		multi.value=("Power up X"+compteur+"!!!!!  "+prix+" cookies!!");
 	}
+
 	function boost(){
 		score++;
 		aff.innerHTML = score;
-
 	}
+
 	function inter(){
 
 	 	if(score >= achat){

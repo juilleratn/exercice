@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="jeu" onclick="idClick()">
-
+		<!--onclick="idClick()" ondblclick="dbclic()-->
 		<div id="l1">
 			<div id="c1l1"></div>
 			<div id="c2l1"></div>
@@ -31,15 +31,34 @@
 	<button id="refresh" onclick="document.location.reload(false)">Reset</button>
 
 	<script>
+		var player= "p1"
+		
+
+		//function dbclic(){event.target.classList.toggle("player2");}
 		function idClick(){
-			//event.target.style.backgroundColor="#ccc";
-			//alert("case "+ event.target.id);
-			event.target.classList.toggle("player1");
-			console.log("case "+ event.target.id);
-		}
-		function jeu(player1){
-			event.target.classList.toggle("player1");
-		}
+			$passe = document.getElementById(event.target.id);
+			if(player=="p1" && $passe.classList!="p1" && $passe.classList!="p2"){	
+				$passe.classList.toggle("p1");				
+			}
+			//	player="p2";
+
+			}else if(player=="p2" && $passe.classList!="p1" && $passe.classList!="p2"){
+				$passe.classList.toggle("p2");
+			}
+			//	player="p1";
+		
+		
+
+
+		
+	
+		
+		
+		
+	
+		
+
+		
 		
 
 	</script>
